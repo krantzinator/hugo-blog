@@ -19,10 +19,10 @@ blog  = "blog/:slug/"
 author        = "Rae Krantz" # Full name shows on blog post pages
 firstname     = "Rae" # First name shows in introduction on main page
 tagline       = "I make things and make things happen" # Appears after the introduction
-introheight   = "large" # Input either 'medium' or 'large' or 'fullheight'
+introheight   = "fullheight" # Input either 'medium' or 'large' or 'fullheight'
 theme         = "dark" # Choose 'light' or 'dark'
 #avatar        = "img/profile.png" # Path to image in static folder eg. img/avatar.png
-email         = "youremail@email.com" # Shows in contact section, or leave blank to omit
+email         = "" # Shows in contact section, or leave blank to omit
 localtime     = true # Show your current local time in contact section
 timezone      = "America/New_York" # Your timezone as in the TZ* column of this list: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 dateform      = "Jan 2, 2006"
@@ -41,8 +41,9 @@ showlatest      = true # Show latest blog post summary
 sharebuttons    = true # On post pages, show share this social buttons
 
 showprojects    = true # Show Projects section on home page
+showtalks    = true # Show Talks section on home page
 
-# This is your projects section. Three images of the same dimensions will look the nicest. If images are omitted, text links will be shown.
+# This is your projects section. If images are omitted, text links will be shown.
 project1link    = "#"
 project1img     = "img/project1.jpg"
 project1title   = "Project 1"
@@ -54,6 +55,19 @@ project2title   = "Project 2"
 project3link    = "#"
 project3img     = "img/project3.jpg"
 project3title   = "Project 3"
+
+# Talks section
+talk1link    = "#"
+talk1img     = "img/talk1.jpg"
+talk1title   = "Talk 1"
+
+talk2link    = "#"
+talk2img     = "img/talk2.jpg"
+talk2title   = "Talk 2"
+
+talk3link    = "#"
+talk3img     = "img/talk3.jpg"
+talk3title   = "Talk 3"
 
 
 # Social icons appear in introduction and contact section. Add as many more as you like.

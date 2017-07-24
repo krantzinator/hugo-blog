@@ -1,4 +1,4 @@
-<!-- 
+<!--
     Hey! Thanks for looking at my code! You win a cookie. :) The nice kind with chocolate chips, not the sneaky spying kind.
 
     This page was originally created for the Personal Portfolio Webpage challenge on FreeCodeCamp's Front End Development Certification course. It's totally responsive, and the first web page I ever coded from scratch.
@@ -34,14 +34,17 @@
     <div class="hero-foot {{ if .Site.Params.fadein }}fade-in three{{ end }}">
     <hr>
     <nav class="nav-center">
-        <a class="nav-item" href="#about">About</a>  
-        {{ if .Site.Params.showprojects }}
-        <a class="nav-item" href="#projects">Projects</a>  
-        {{ end }}
+        <a class="nav-item" href="#about">About</a>
         {{ if .Site.Params.showblog }}
-        <a class="nav-item" href="#blog">Blog</a>  
+        <a class="nav-item" href="#blog">Blog</a>
         {{ end }}
-        <a class="nav-item" href="#contact">Contact</a> 
+        {{ if .Site.Params.showtalks }}
+        <a class="nav-item" href="#talks">Talks</a>
+        {{ end }}
+        {{ if .Site.Params.showprojects }}
+        <a class="nav-item" href="#projects">Projects</a>
+        {{ end }}
+        <a class="nav-item" href="#contact">Contact</a>
     </nav>
     <hr>
     </div><!-- Done with nav bar -->
@@ -61,7 +64,7 @@
             </div>
             <div class="column markdown">
                 {{ range .Data.Pages }}
-                    {{if eq .Title "about" }} 
+                    {{if eq .Title "about" }}
                             {{.Content}}
                         {{end}}
                     {{ end }}
@@ -74,22 +77,29 @@
 
 <div class="container"><hr></div>
 
-
-<!-- Now for some cool projects -->
-    {{ if .Site.Params.showprojects }}
-    <div class="section" id="projects">
-        {{ partial "projects.html" . }}
-    </div><!-- End Projects section -->
-
-    <div class="container"><hr></div>
-    {{ end }} 
-
-
 <!-- Let's show some blog posts -->
     {{ if .Site.Params.showblog }}
     <div class="section" id="blog">
         {{ partial "blogsection.html" . }}
     </div><!-- End Blog section -->
+
+    <div class="container"><hr></div>
+    {{ end }}
+
+    <!-- Now for some cool talks -->
+    {{ if .Site.Params.showtalks }}
+    <div class="section" id="talks">
+        {{ partial "talks.html" . }}
+    </div><!-- End Talks section -->
+
+    <div class="container"><hr></div>
+    {{ end }}
+
+    <!-- Now for some cool projects -->
+    {{ if .Site.Params.showprojects }}
+    <div class="section" id="projects">
+        {{ partial "projects.html" . }}
+    </div><!-- End Projects section -->
 
     <div class="container"><hr></div>
     {{ end }}
@@ -100,7 +110,7 @@
     <h2 class="title is-2">Contact</h2>
         <div class="markdown">
             {{ range .Data.Pages }}
-                {{if eq .Title "contact" }} 
+                {{if eq .Title "contact" }}
                         {{.Content}}
                     {{end}}
                 {{ end }}
